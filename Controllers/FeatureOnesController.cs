@@ -13,10 +13,11 @@ namespace featuretoggledemo.Controllers
     public class FeatureOnesController : Controller
     {
         private readonly featuretoggledemoContext _context;
-
-        public FeatureOnesController(featuretoggledemoContext context)
+        private readonly IFeatureManager _features;
+        public FeatureOnesController(featuretoggledemoContext context,IFeatureManager features)
         {
             _context = context;
+            _features = features;
         }
 
         // GET: FeatureOnes

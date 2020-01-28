@@ -12,10 +12,12 @@ namespace featuretoggledemo.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IFeatureManager _features;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,IFeatureManager features)
         {
             _logger = logger;
+            _features = features;
         }
 
         public IActionResult Index()
