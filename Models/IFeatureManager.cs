@@ -8,5 +8,7 @@ namespace featuretoggledemo.Models
     public interface IFeatureManager
     {
         List<Feature> Features { get; }
+        bool Enabled(string feature);
+
     }
 }

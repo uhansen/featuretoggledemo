@@ -18,6 +18,7 @@ namespace featuretoggledemo.Controllers
         {
             _context = context;
             _features = features;
+            _features.Enabled(nameof(FeatureFlags.FeatureA));
         }
 
         // GET: FeatureOnes
