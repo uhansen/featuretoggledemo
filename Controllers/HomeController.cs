@@ -22,6 +22,8 @@ namespace featuretoggledemo.Controllers
 
         public IActionResult Index()
         {
+            ViewData["FeatureA"]= _features.Enabled(nameof(FeatureFlags.FeatureA));
+            ViewBag.FeatureA = _features.Enabled(nameof(FeatureFlags.FeatureA));
             return View();
         }
 
@@ -35,5 +37,6 @@ namespace featuretoggledemo.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
     }
 }
