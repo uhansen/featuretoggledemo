@@ -1,4 +1,5 @@
-﻿using System;
+﻿using featuretoggledemo.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,13 +8,15 @@ namespace featuretoggledemo.Models
 {
     public class FeatureManager : IFeatureManager
     {
-        public FeatureManager(List<Feature> features)
+        private featuretoggledemoContext _ctx;
+        //public FeatureManager(List<Feature> features)
+        //{
+        //    Features = features;
+        //}
+        public FeatureManager(featuretoggledemoContext ctx)
         {
-            Features = features;
-        }
-        public FeatureManager()
-        {
-            Features = new List<Feature>();
+            _ctx = ctx;
+            Features = _ctx.Features.ToList();
         }
         public List<Feature> Features { get; private set; }
 

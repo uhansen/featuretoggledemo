@@ -22,7 +22,6 @@ namespace featuretoggledemo.Controllers
 
         public IActionResult Index()
         {
-            ViewData["FeatureA"]= _features.Enabled(nameof(FeatureFlags.FeatureA));
             ViewBag.FeatureA = _features.Enabled(nameof(FeatureFlags.FeatureA));
             return View();
         }

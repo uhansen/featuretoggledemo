@@ -31,7 +31,7 @@ namespace featuretoggledemo
             services.AddDbContext<featuretoggledemoContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("featuretoggledemoContext")));
 
-            services.AddSingleton<IFeatureManager, FeatureManager>();
+            services.AddTransient<IFeatureManager, FeatureManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

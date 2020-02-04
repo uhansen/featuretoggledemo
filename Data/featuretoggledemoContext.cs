@@ -14,7 +14,7 @@ namespace featuretoggledemo.Data
         {
         }
 
-        public DbSet<featuretoggledemo.Models.FeatureOne> FeatureOne { get; set; }
+   
         public DbSet<Feature> Features { get; set; }
     }
 }
