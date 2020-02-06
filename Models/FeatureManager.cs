@@ -22,7 +22,7 @@ namespace featuretoggledemo.Models
 
         public bool Enabled(string feature)
         {
-            return Features.Exists(f => f.Name.Equals(feature));
+            return Features.Exists(f => f.Name.Equals(feature) && f.Enabled);
         }
     }
 }

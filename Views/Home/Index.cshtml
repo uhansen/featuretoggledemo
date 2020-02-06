@@ -1,16 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    var featureA = ViewBag.FeatureA;
+    ViewData["Title"] = "Feature Toggle Demo";
+    
 
 }
 
     <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <h1 class="display-4">Welcome feature toggle demo</h1>
+        
         <button type="button" class="btn btn-primary">Info</button>
-        @{ if (featureA)
+        @{ if (ViewBag.FeatureA)
             {
-                <button type="button" class="btn btn-secondary">Mail</button>
+                <button type="button" class="btn btn-secondary">Feature A</button>
+            }
+        }
+        @{ if (ViewBag.FeatureB)
+            {
+                <button type="button" class="btn btn-secondary">Feature B</button>
+            }
+        }
+        @{ if (ViewBag.FeatureC)
+            {
+                <button type="button" class="btn btn-secondary">Feature C</button>
+            }
+        }
+        @{ if (ViewBag.FeatureD)
+            {
+                <button type="button" class="btn btn-secondary">Feature D</button>
             }
         }
     </div>

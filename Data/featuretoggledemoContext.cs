@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using featuretoggledemo.Models;
+using featuretoggledemo.Models.Configuration;
 
 namespace featuretoggledemo.Data
 {
@@ -16,5 +17,10 @@ namespace featuretoggledemo.Data
 
    
         public DbSet<Feature> Features { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new FeatureManagerConfiguration());
+        }
     }
 }
