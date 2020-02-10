@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using featuretoggledemo.Data;
 using featuretoggledemo.Models;
+using featuretoggledemo.Models.Configuration;
 
 namespace featuretoggledemo
 {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using featuretoggledemo.Models;
+using featuretoggledemo.Models.Configuration;
 
 namespace featuretoggledemo.Controllers
 {

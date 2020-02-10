@@ -4,15 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace featuretoggledemo.Models
+namespace featuretoggledemo.Models.Configuration
 {
     public class FeatureManager : IFeatureManager
     {
         private featuretoggledemoContext _ctx;
-        //public FeatureManager(List<Feature> features)
-        //{
-        //    Features = features;
-        //}
+        
         public FeatureManager(featuretoggledemoContext ctx)
         {
             _ctx = ctx;
