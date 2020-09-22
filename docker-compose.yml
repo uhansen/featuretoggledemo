@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  featuretoggledemo:
+    image: ${DOCKER_REGISTRY-}featuretoggledemo
+    build:
+      context: .
+      dockerfile: Dockerfile
+   
+  sql:
+    image: microsoft/mssql-server-windows-developer
+    
